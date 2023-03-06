@@ -42,7 +42,7 @@ def scan_ble_devices():
     
     device_number = input("Geben die Nummer des Gerätes an mit dem sich vernunde werden soll:\n")
     BLUE_ADDR, device_name = nearby_devices[int(device_number)]
-    print(f"Verbindung mit {BLUE_ADDR} - {device_name} wird hxergestellt!")
+    print(f"Verbindung mit {BLUE_ADDR} - {device_name} wird hergestellt!")
 
 def parse_arguments():
     """
@@ -58,7 +58,8 @@ def onClick(event):
     pause ^= True
 
 def update_plot():
-    
+    """
+    """
     x_data.append(float(current_data[0]))
     y_data.append(float(current_data[1]))
     z_data.append(float(current_data[2]))
@@ -81,7 +82,7 @@ def reset_state():
 
 buffer = ""
 
-def animatino_callback(frame):
+def animation_callback(frame):
     global current_data, x_data, y_data, z_data, sock, buffer
     recev_data = sock.recv(128)
     if recev_data and not pause:
@@ -105,7 +106,8 @@ def animatino_callback(frame):
 
 def handle_battery_message(battery_charge):
     if(battery_charge=="BL"):
-        print("Batteriestand ist Niedrig! \nBitte den Akku mit dem Mirkrcontroller an eine Stromquelle Anschließen!")
+        print("Batteriestand ist Niedrig! \n\
+              Bitte den Akku mit dem Mirkrcontroller an eine Stromquelle Anschließen!")
     elif(battery_charge=="BM"):
         print("Batteriestand ist Mittel!")
     elif(battery_charge=="BH"):
@@ -135,7 +137,7 @@ def main():
         sock.recv(1024)
         print('Klicke auf den Graphen um die aufnahme zu pausieren!')
         fig.canvas.mpl_connect('button_press_event', onClick)
-        ani = animation.FuncAnimation(fig, animatino_callback, interval=5, cache_frame_data=False)
+        ani = animation.FuncAnimation(fig, animation_callback, interval=5, cache_frame_data=False)
         plt.show()
         user_input = input('Soll eine neue Aufnahme gestartet werden? \n \"ja\" oder \"nein\"') 
         if user_input == "ja":
