@@ -1,0 +1,16 @@
+import gui
+import threading
+from server import BtServer
+
+def main():
+    server = BtServer() 
+    ui = gui.App()
+    server.connect_gui(ui)
+    server_thread = threading.Thread(target=server.run())
+    server_thread.start()
+    ui.mainloop()
+    print("stopped mainloop")
+    server_thread.join()
+    server.stop()
+
+main()
