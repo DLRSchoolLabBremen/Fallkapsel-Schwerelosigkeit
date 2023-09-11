@@ -18,7 +18,6 @@ a = Analysis(
     datas=[(ctk_location + '\\customtkinter', 'customtkinter\\')],
     hiddenimports=[],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     win_no_prefer_redirects=False,
