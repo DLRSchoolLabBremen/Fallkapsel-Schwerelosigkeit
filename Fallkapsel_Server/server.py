@@ -1,7 +1,7 @@
 import bluetooth
 import time
 import re
-from gui import App
+from .gui import App
 import threading
 
 class BtServer():
@@ -29,7 +29,7 @@ class BtServer():
         run(): Executes the main functionality of the server.
         stop(): Stops the main functionality of the server.
     """
-    def __init__(self, device_address: str = '0C:DC:7E:3C:10:8E', port: int = 1, delay: int = 2):
+    def __init__(self, device_address: str, port: int, delay: int = 2):
         self.GUI = None
         self.port = port
         self.delay = delay

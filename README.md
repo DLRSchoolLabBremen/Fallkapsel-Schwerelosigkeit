@@ -19,3 +19,8 @@ Um dieses auf einem Rechner einzurichten müssen folgende Schritte ausgeführt w
    - Führe die ersten zwei Schritte aus 3. aus
    - Um das Programm zu starten gebe in die Konsoloe:
      - ```python bt_server_fallkapsel.py ```
+
+## Compilieren für Windows mit pyinstaller
+```
+pyinstaller.exe .\Fallkapsel-Schwerelosigkeit\__main__ --add-data "c:\users\leonb\appdata\local\programs\python\python39\lib\site-packages\customtkinter;customtkinter\" --onefile --windowed -n Fallkapselserver
+```
