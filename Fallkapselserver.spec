@@ -15,7 +15,7 @@ a = Analysis(
     ['__main__'],
     pathex=[],
     binaries=[],
-    datas=[(ctk_location + '\\customtkinter', 'customtkinter\\')],
+    datas=[(ctk_location.strip() + '\\customtkinter', 'customtkinter\\')],
     hiddenimports=[],
     hookspath=[],
     runtime_hooks=[],
