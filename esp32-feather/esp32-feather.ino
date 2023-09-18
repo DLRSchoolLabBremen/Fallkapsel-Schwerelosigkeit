@@ -1,7 +1,8 @@
-"""
-Part of this code is based on the (Adafruit MPU6050 example)[https://github.com/adafruit/Adafruit_MPU6050/blob/master/license.txt] 
-by Copyright (c) 2019 Bryan Siepert for Adafruit Industries.
-"""
+/**
+ * Part of this code is based on the (Adafruit MPU6050 example)[https://github.com/adafruit/Adafruit_MPU6050/blob/master/license.txt]
+ * by Copyright (c) 2019 Bryan Siepert for Adafruit Industries.
+*/
+
 #include <BluetoothSerial.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
